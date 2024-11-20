@@ -29,7 +29,7 @@ class FirstSplash extends StatelessWidget {
                   height: 169,
                 ),
                 const Text(
-                  'UNIVERSITAS IBNU SINA',
+                  'UNIVERSITAS IBNU SINA sadwad',
                   style: TextStyle(color: Color(0xffFFFFFF)),
                 ),
               ],
