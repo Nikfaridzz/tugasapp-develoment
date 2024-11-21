@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:tugas/pages/firts_splash.dart';
+import 'package:tugas/pages/firts_splash.dart';
+import 'package:tugas/pages/second_splash.dart';
 import 'package:tugas/pages/signin.dart';
 
 void main() => runApp(const MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Signin(),
+      home: FirstSplash(),
     );
   }
 }
