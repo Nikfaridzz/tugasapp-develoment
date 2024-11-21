@@ -1,8 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:tugas/pages/second_splash.dart';
 
-class FirstSplash extends StatelessWidget {
+class FirstSplash extends StatefulWidget {
   const FirstSplash({super.key});
+
+  @override
+  State<FirstSplash> createState() => _FirstSplashState();
+}
+
+class _FirstSplashState extends State<FirstSplash> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 7), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const SecondSplash()),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +36,7 @@ class FirstSplash extends StatelessWidget {
               children: [
                 Center(
                   child: Image.asset(
-                    'assets/ibnu.png',
+                    'assets/logo.png',
                     width: 150,
                     height: 150,
                   ),
@@ -29,29 +45,14 @@ class FirstSplash extends StatelessWidget {
                   height: 169,
                 ),
                 const Text(
-                  'UNIVERSITAS IBNU SINA sadwad',
-                  style: TextStyle(color: Color(0xffFFFFFF)),
+                  'Catatan Ku',
+                  style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 32,
+                  ),
                 ),
               ],
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: FloatingActionButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SecondSplash()),
-                  );
-                },
-                backgroundColor: Colors.white,
-                child: const Icon(
-                  Icons.arrow_forward,
-                  color: Color(0xff047857),
-                ),
-              ),
             ),
           ),
         ],

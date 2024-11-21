@@ -11,7 +11,7 @@ class SecondSplash extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/wal.jpg'),
+                image: AssetImage('assets/wal.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -24,14 +24,14 @@ class SecondSplash extends StatelessWidget {
             child: Row(
               children: [
                 Image.asset(
-                  'assets/ibnu.png',
+                  'assets/logo.png',
                   width: 51,
                 ),
                 const SizedBox(
                   width: 18,
                 ),
                 const Text(
-                  'UIS UNGGUL',
+                  'Catatan Ku',
                   style: TextStyle(
                     color: Color(0xffFFFFFF),
                     fontWeight: FontWeight.bold,
